@@ -1,0 +1,69 @@
+{
+    "name": "Event",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dueDate",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "eventCategory",
+            "fieldType": "EventCategory",
+            "fieldValues": "INTERNAL,EXTERNAL"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createdAt",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "image",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "targetGroup",
+            "fieldType": "TargetGroup",
+            "fieldValues": "ADMIN,DEVELOPER,ACCOUNTANT,NETWORK,RECEPTION,KITCHEN,ALL"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "eventType",
+            "otherEntityRelationshipName": "event",
+            "relationshipName": "event",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "comment",
+            "otherEntityRelationshipName": "event",
+            "relationshipName": "comment"
+        }
+    ],
+    "changelogDate": "20190404093935",
+    "javadoc": "The Events entity.\nThis is an entity to add a new event and hold the past events\n@mbugua A true hipster",
+    "entityTableName": "event",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

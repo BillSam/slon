@@ -1,0 +1,62 @@
+{
+    "name": "Assignment",
+    "fields": [
+        {
+            "fieldName": "dueDate",
+            "javadoc": "fieldName",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "dueDay",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdAt",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "morningSessions",
+            "otherEntityRelationshipName": "assignment",
+            "relationshipName": "morningSession",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "task",
+            "otherEntityRelationshipName": "assignment",
+            "relationshipName": "task",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "assignment",
+            "relationshipName": "user",
+            "otherEntityField": "login",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190404093930",
+    "javadoc": "The Assignment entity.\nThis is an entity to hold all the generated rotas\n@mbugua A true hipster",
+    "entityTableName": "assignment",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,31 @@
+{
+    "name": "EventType",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "event",
+            "otherEntityRelationshipName": "event",
+            "relationshipName": "event"
+        }
+    ],
+    "changelogDate": "20190404093934",
+    "javadoc": "The EventType entity\nThis is an entity to add a new event\n@mbugua A true hipster",
+    "entityTableName": "event_type",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

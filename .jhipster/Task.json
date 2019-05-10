@@ -1,0 +1,45 @@
+{
+    "name": "Task",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createdAt",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "frequency",
+            "fieldType": "TaskFrequency",
+            "fieldValues": "MONTHLY,YEARLY,DAILY"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "assignment",
+            "otherEntityRelationshipName": "task",
+            "relationshipName": "assignment",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190404093931",
+    "javadoc": "The Task entity.\nThis is an entity to add a new Task that require Rota generation\nTask could be like prayer Task\n@mbugua A true hipster",
+    "entityTableName": "task",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

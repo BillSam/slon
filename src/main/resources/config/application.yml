@@ -115,7 +115,7 @@ jhipster:
         #allow-credentials: true
         #max-age: 1800
     mail:
-        from: slon@localhost
+        from: cangetroot@gmail.com
     swagger:
         default-include-pattern: /api/.*
         title: slon API

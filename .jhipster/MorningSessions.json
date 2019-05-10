@@ -1,0 +1,50 @@
+{
+    "name": "MorningSessions",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "quote",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "verse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "body",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "image",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "assignment",
+            "otherEntityRelationshipName": "morningSession",
+            "relationshipName": "assignment",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190404093932",
+    "javadoc": "The MorningSessions entity.\nThis is an entity to hold all the engagements done at any perticular time eg morning sharing,Event,Talks\n@mbugua A true hipster",
+    "entityTableName": "morning_sessions",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

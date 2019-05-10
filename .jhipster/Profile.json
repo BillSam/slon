@@ -1,0 +1,64 @@
+{
+    "name": "Profile",
+    "fields": [
+        {
+            "fieldName": "dateOfEmployment",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "secondName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "otherName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gitProfile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "image",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "bio",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "gender",
+            "fieldType": "Gender",
+            "fieldValues": "MALE,FEMALE"
+        },
+        {
+            "fieldName": "project",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "user",
+            "otherEntityRelationshipName": "profile",
+            "relationshipName": "user",
+            "otherEntityField": "login",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190404093936",
+    "javadoc": "The Profile entity.\nThis is an entity to add a new user Profile\n@mbugua A true hipster",
+    "entityTableName": "profile",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
