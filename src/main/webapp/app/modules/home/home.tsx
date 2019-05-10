@@ -48,7 +48,7 @@ export class Home extends React.Component<IHomeProp> {
               </Alert>
             </div>
           )}
-          <p>If you have any question on JHipster:</p>
+          <p>If you have any question on JHipster please reach us here:</p>
 
           <ul>
             <li>
